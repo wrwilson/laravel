@@ -50,6 +50,8 @@ License: You must have a valid license purchased only from themeforest(the above
   <link href="{{ URL::asset('plugins/fancybox/source/jquery.fancybox.css') }}" rel="stylesheet">              
   <link href="{{ URL::asset('plugins/bxslider/jquery.bxslider.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="{{ URL::asset('plugins/layerslider/css/layerslider.css') }}" type="text/css">
+    <!-- Page level stuff for pages that aren't the homepage -->
+    <link href="{{ URL::asset('plugins/rateit/src/rateit.css') }}" rel="stylesheet" type="text/css">
   <!-- Page level plugin styles END -->
 
   <!-- Theme styles START -->

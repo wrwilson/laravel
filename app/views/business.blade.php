@@ -5,145 +5,25 @@
    <div class="main">
       <div class="container">
         <ul class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="">Store</a></li>
-            <li class="active">Cool green dress with red bell</li>
+            <li><a href="{{ URL::to('/') }}">Home</a></li>
+            <li><a href="{{ URL::to('business') }}">business broadband</a></li>
+            <li class="active">Product 1</li>
         </ul>
         <!-- BEGIN SIDEBAR & CONTENT -->
         <div class="row margin-bottom-40">
-          <!-- BEGIN SIDEBAR -->
-          <div class="sidebar col-md-3 col-sm-5">
-            <ul class="list-group margin-bottom-25 sidebar-menu">
-              <li class="list-group-item clearfix"><a href="product-list.html"><i class="fa fa-angle-right"></i> Ladies</a></li>
-              <li class="list-group-item clearfix dropdown active">
-                <a href="javascript:void(0);" class="collapsed">
-                  <i class="fa fa-angle-right"></i>
-                  Mens
-                  <i class="fa fa-angle-down"></i>
-                </a>
-                <ul class="dropdown-menu" style="display:block;">
-                  <li class="list-group-item dropdown clearfix active">
-                    <a href="javascript:void(0);" class="collapsed"><i class="fa fa-circle"></i> Shoes <i class="fa fa-angle-down"></i></a>
-                      <ul class="dropdown-menu" style="display:block;">
-                        <li class="list-group-item dropdown clearfix">
-                          <a href="javascript:void(0);"><i class="fa fa-circle"></i> Classic <i class="fa fa-angle-down"></i></a>
-                          <ul class="dropdown-menu">
-                            <li><a href="product-list.html"><i class="fa fa-circle"></i> Classic 1</a></li>
-                            <li><a href="product-list.html"><i class="fa fa-circle"></i> Classic 2</a></li>
-                          </ul>
-                        </li>
-                        <li class="list-group-item dropdown clearfix active">
-                          <a href="javascript:void(0);" class="collapsed"><i class="fa fa-circle"></i> Sport  <i class="fa fa-angle-down"></i></a>
-                          <ul class="dropdown-menu" style="display:block;">
-                            <li class="active"><a href="product-list.html"><i class="fa fa-circle"></i> Sport 1</a></li>
-                            <li><a href="product-list.html"><i class="fa fa-circle"></i> Sport 2</a></li>
-                          </ul>
-                        </li>
-                      </ul>
-                  </li>
-                  <li><a href="product-list.html"><i class="fa fa-circle"></i> Trainers</a></li>
-                  <li><a href="product-list.html"><i class="fa fa-circle"></i> Jeans</a></li>
-                  <li><a href="product-list.html"><i class="fa fa-circle"></i> Chinos</a></li>
-                  <li><a href="product-list.html"><i class="fa fa-circle"></i> T-Shirts</a></li>
-                </ul>
-              </li>
-              <li class="list-group-item clearfix"><a href="product-list.html"><i class="fa fa-angle-right"></i> Kids</a></li>
-              <li class="list-group-item clearfix"><a href="product-list.html"><i class="fa fa-angle-right"></i> Accessories</a></li>
-              <li class="list-group-item clearfix"><a href="product-list.html"><i class="fa fa-angle-right"></i> Sports</a></li>
-              <li class="list-group-item clearfix"><a href="product-list.html"><i class="fa fa-angle-right"></i> Brands</a></li>
-              <li class="list-group-item clearfix"><a href="product-list.html"><i class="fa fa-angle-right"></i> Electronics</a></li>
-              <li class="list-group-item clearfix"><a href="product-list.html"><i class="fa fa-angle-right"></i> Home & Garden</a></li>
-              <li class="list-group-item clearfix"><a href="product-list.html"><i class="fa fa-angle-right"></i> Custom Link</a></li>
-            </ul>
-
-            <div class="sidebar-products clearfix">
-              <h2>Bestsellers</h2>
-              <div class="item">
-                <a href="item.html"><img src="{{ URL::asset('temp/products/k1.jpg') }}" alt="Some Shoes in Animal with Cut Out"></a>
-                <h3><a href="item.html">Some Shoes in Animal with Cut Out</a></h3>
-                <div class="price">$31.00</div>
-              </div>
-              <div class="item">
-                <a href="item.html"><img src="{{ URL::asset('temp/products/k4.jpg') }}" alt="Some Shoes in Animal with Cut Out"></a>
-                <h3><a href="item.html">Some Shoes in Animal with Cut Out</a></h3>
-                <div class="price">$23.00</div>
-              </div>
-              <div class="item">
-                <a href="item.html"><img src="{{ URL::asset('temp/products/k3.jpg') }}" alt="Some Shoes in Animal with Cut Out"></a>
-                <h3><a href="item.html">Some Shoes in Animal with Cut Out</a></h3>
-                <div class="price">$86.00</div>
-              </div>
-            </div>
-          </div>
-          <!-- END SIDEBAR -->
-
+          
           <!-- BEGIN CONTENT -->
-          <div class="col-md-9 col-sm-7">
+          <div class="col-md-12 col-sm-12">
             <div class="product-page">
               <div class="row">
-                <div class="col-md-6 col-sm-6">
-                  <div class="product-main-image">
-                    <img src="{{ URL::asset('temp/products/model7.jpg') }}" alt="Cool green dress with red bell" class="img-responsive" data-BigImgSrc="{{ URL::asset('temp/products/model7.jpg') }}">
-                  </div>
-                  <div class="product-other-images">
-                    <a href="#" class="active"><img alt="Berry Lace Dress" src="{{ URL::asset('temp/products/model3.jpg') }}"></a>
-                    <a href="#"><img alt="Berry Lace Dress" src="{{ URL::asset('temp/products/model4.jpg') }}"></a>
-                    <a href="#"><img alt="Berry Lace Dress" src="{{ URL::asset('temp/products/model5.jpg') }}"></a>
-                  </div>
-                </div>
-                <div class="col-md-6 col-sm-6">
-                  <h1>Cool green dress with red bell</h1>
-                  <div class="price-availability-block clearfix">
-                    <div class="price">
-                      <strong><span>$</span>47.00</strong>
-                      <em>$<span>62.00</span></em>
-                    </div>
-                    <div class="availability">
-                      Availability: <strong>In Stock</strong>
-                    </div>
-                  </div>
-                  <div class="description">
-                    <p>Lorem ipsum dolor ut sit ame dolore  adipiscing elit, sed nonumy nibh sed euismod laoreet dolore magna aliquarm erat volutpat 
-Nostrud duis molestie at dolore.</p>
-                  </div>
-                  <div class="product-page-options">
-                    <div class="pull-left">
-                      <label class="control-label">Size:</label>
-                      <select class="form-control input-sm">
-                        <option>L</option>
-                        <option>M</option>
-                        <option>XL</option>
-                      </select>
-                    </div>
-                    <div class="pull-left">
-                      <label class="control-label">Color:</label>
-                      <select class="form-control input-sm">
-                        <option>Red</option>
-                        <option>Blue</option>
-                        <option>Black</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="product-page-cart">
-                    <div class="product-quantity">
-                        <input id="product-quantity" type="text" value="1" readonly class="form-control input-sm">
-                    </div>
-                    <button class="btn btn-primary" type="submit">Add to cart</button>
-                  </div>
-                  <div class="review">
-                    <input type="range" value="4" step="0.25" id="backing4">
-                    <div class="rateit" data-rateit-backingfld="#backing4" data-rateit-resetable="false"  data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5">
-                    </div>
-                    <a href="#">7 reviews</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Write a review</a>
-                  </div>
-                  <ul class="social-icons">
-                    <li><a class="facebook" data-original-title="facebook" href="#"></a></li>
-                    <li><a class="twitter" data-original-title="twitter" href="#"></a></li>
-                    <li><a class="googleplus" data-original-title="googleplus" href="#"></a></li>
-                    <li><a class="evernote" data-original-title="evernote" href="#"></a></li>
-                    <li><a class="tumblr" data-original-title="tumblr" href="#"></a></li>
-                  </ul>
-                </div>
+
+                <!-- !!!!CONTENT GOES HERE!!!! -->
+                <div class="review">
+	                <input type="range" value="4" step="0.25" id="backing4" style="display: none;">
+	                <div class="rateit" data-rateit-backingfld="#backing4" data-rateit-resetable="false" data-rateit-ispreset="true" data-rateit-min="0" data-rateit-max="5">
+	                <button id="rateit-reset-2" data-role="none" class="rateit-reset" aria-label="reset rating" aria-controls="rateit-range-2" style="display: none;"></button><div id="rateit-range-2" class="rateit-range" tabindex="0" role="slider" aria-label="rating" aria-owns="rateit-reset-2" aria-valuemin="0" aria-valuemax="5" aria-valuenow="4" aria-readonly="false" style="width: 80px; height: 16px;"><div class="rateit-selected rateit-preset" style="height: 16px; width: 64px;"></div><div class="rateit-hover" style="height: 16px;"></div></div></div>
+	                <a href="#">7 reviews</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">Write a review</a>
+                 </div>
 
                 <div class="product-page-content">
                   <ul id="myTab" class="nav nav-tabs">
@@ -251,9 +131,9 @@ Nostrud duis molestie at dolore.</p>
                 <li>
                   <div class="product-item">
                     <div class="pi-img-wrapper">
-                      <img src="{{ URL::asset('temp/products/k4.jpg') }}" class="img-responsive" alt="Berry Lace Dress">
+                      <img src="assets/temp/products/k4.jpg" class="img-responsive" alt="Berry Lace Dress">
                       <div>
-                        <a href="{{ URL::asset('temp/products/k4.jpg') }}" class="btn btn-default fancybox-button">Zoom</a>
+                        <a href="assets/temp/products/k4.jpg" class="btn btn-default fancybox-button">Zoom</a>
                         <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
                       </div>
                     </div>
@@ -265,9 +145,9 @@ Nostrud duis molestie at dolore.</p>
                 <li>
                   <div class="product-item">
                     <div class="pi-img-wrapper">
-                      <img src="{{ URL::asset('temp/products/k1.jpg') }}" class="img-responsive" alt="Berry Lace Dress">
+                      <img src="assets/temp/products/k1.jpg" class="img-responsive" alt="Berry Lace Dress">
                       <div>
-                        <a href="{{ URL::asset('temp/products/k1.jpg') }}" class="btn btn-default fancybox-button">Zoom</a>
+                        <a href="assets/temp/products/k1.jpg" class="btn btn-default fancybox-button">Zoom</a>
                         <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
                       </div>
                     </div>
@@ -279,9 +159,9 @@ Nostrud duis molestie at dolore.</p>
                 <li>
                   <div class="product-item">
                     <div class="pi-img-wrapper">
-                      <img src="{{ URL::asset('temp/products/k2.jpg') }}" class="img-responsive" alt="Berry Lace Dress">
+                      <img src="assets/temp/products/k2.jpg" class="img-responsive" alt="Berry Lace Dress">
                       <div>
-                        <a href="{{ URL::asset('temp/products/k2.jpg') }}" class="btn btn-default fancybox-button">Zoom</a>
+                        <a href="assets/temp/products/k2.jpg" class="btn btn-default fancybox-button">Zoom</a>
                         <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
                       </div>
                     </div>
@@ -293,9 +173,9 @@ Nostrud duis molestie at dolore.</p>
                 <li>
                   <div class="product-item">
                     <div class="pi-img-wrapper">
-                      <img src="{{ URL::asset('temp/products/k3.jpg') }}" class="img-responsive" alt="Berry Lace Dress">
+                      <img src="assets/temp/products/k3.jpg" class="img-responsive" alt="Berry Lace Dress">
                       <div>
-                        <a href="{{ URL::asset('temp/products/k3.jpg') }}" class="btn btn-default fancybox-button">Zoom</a>
+                        <a href="assets/temp/products/k3.jpg" class="btn btn-default fancybox-button">Zoom</a>
                         <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
                       </div>
                     </div>
@@ -307,9 +187,9 @@ Nostrud duis molestie at dolore.</p>
                 <li>
                   <div class="product-item">
                     <div class="pi-img-wrapper">
-                      <img src="{{ URL::asset('temp/products/k4.jpg') }}" class="img-responsive" alt="Berry Lace Dress">
+                      <img src="assets/temp/products/k4.jpg" class="img-responsive" alt="Berry Lace Dress">
                       <div>
-                        <a href="{{ URL::asset('temp/products/k4.jpg') }}" class="btn btn-default fancybox-button">Zoom</a>
+                        <a href="assets/temp/products/k4.jpg" class="btn btn-default fancybox-button">Zoom</a>
                         <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
                       </div>
                     </div>
@@ -321,9 +201,9 @@ Nostrud duis molestie at dolore.</p>
                 <li>
                   <div class="product-item">
                     <div class="pi-img-wrapper">
-                      <img src="{{ URL::asset('temp/products/k1.jpg') }}" class="img-responsive" alt="Berry Lace Dress">
+                      <img src="assets/temp/products/k1.jpg" class="img-responsive" alt="Berry Lace Dress">
                       <div>
-                        <a href="{{ URL::asset('temp/products/k1.jpg') }}" class="btn btn-default fancybox-button">Zoom</a>
+                        <a href="assets/temp/products/k1.jpg" class="btn btn-default fancybox-button">Zoom</a>
                         <a href="#product-pop-up" class="btn btn-default fancybox-fast-view">View</a>
                       </div>
                     </div>
@@ -345,18 +225,18 @@ Nostrud duis molestie at dolore.</p>
         <div class="row">
           <div class="bxslider-wrapper">
             <ul class="bxslider" data-slides-phone="1" data-slides-tablet="3" data-slides-desktop="6" data-slide-margin="15">
-              <li><a href="#"><img src="{{ URL::asset('temp/brands/canon.jpg') }}" alt="canon" title="canon"></a></li>
-              <li><a href="#"><img src="{{ URL::asset('temp/brands/esprit.jpg') }}" alt="esprit" title="esprit"></a></li>
-              <li><a href="#"><img src="{{ URL::asset('temp/brands/gap.jpg') }}" alt="gap" title="gap"></a></li>
-              <li><a href="#"><img src="{{ URL::asset('temp/brands/next.jpg') }}" alt="next" title="next"></a></li>
-              <li><a href="#"><img src="{{ URL::asset('temp/brands/puma.jpg') }}" alt="puma" title="puma"></a></li>
-              <li><a href="#"><img src="{{ URL::asset('temp/brands/zara.jpg') }}" alt="zara" title="zara"></a></li>
-              <li><a href="#"><img src="{{ URL::asset('temp/brands/canon.jpg') }}" alt="canon" title="canon"></a></li>
-              <li><a href="#"><img src="{{ URL::asset('temp/brands/esprit.jpg') }}" alt="esprit" title="esprit"></a></li>
-              <li><a href="#"><img src="{{ URL::asset('temp/brands/gap.jpg') }}" alt="gap" title="gap"></a></li>
-              <li><a href="#"><img src="{{ URL::asset('temp/brands/next.jpg') }}" alt="next" title="next"></a></li>
-              <li><a href="#"><img src="{{ URL::asset('temp/brands/puma.jpg') }}" alt="puma" title="puma"></a></li>
-              <li><a href="#"><img src="{{ URL::asset('temp/brands/zara.jpg') }}" alt="zara" title="zara"></a></li>
+              <li><a href="#"><img src="assets/temp/brands/canon.jpg" alt="canon" title="canon"></a></li>
+              <li><a href="#"><img src="assets/temp/brands/esprit.jpg" alt="esprit" title="esprit"></a></li>
+              <li><a href="#"><img src="assets/temp/brands/gap.jpg" alt="gap" title="gap"></a></li>
+              <li><a href="#"><img src="assets/temp/brands/next.jpg" alt="next" title="next"></a></li>
+              <li><a href="#"><img src="assets/temp/brands/puma.jpg" alt="puma" title="puma"></a></li>
+              <li><a href="#"><img src="assets/temp/brands/zara.jpg" alt="zara" title="zara"></a></li>
+              <li><a href="#"><img src="assets/temp/brands/canon.jpg" alt="canon" title="canon"></a></li>
+              <li><a href="#"><img src="assets/temp/brands/esprit.jpg" alt="esprit" title="esprit"></a></li>
+              <li><a href="#"><img src="assets/temp/brands/gap.jpg" alt="gap" title="gap"></a></li>
+              <li><a href="#"><img src="assets/temp/brands/next.jpg" alt="next" title="next"></a></li>
+              <li><a href="#"><img src="assets/temp/brands/puma.jpg" alt="puma" title="puma"></a></li>
+              <li><a href="#"><img src="assets/temp/brands/zara.jpg" alt="zara" title="zara"></a></li>
             </ul>
           </div>
         </div>
