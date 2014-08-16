@@ -10,30 +10,34 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
+HTML::macro('nav_link', function($url, $text) {
+    $class = ( Request::is($url) || Request::is($url.'/*') ) ? ' class="active"' : '';
+    return '<li'.$class.'><a href="'.URL::to($url).'">'.$text.'</a></li>';
+});
 
 Route::get('/', function()
 {
 	return View::make('homepage');
 });
 
-Route::get('business', function() {
-	return View::make('business');
+Route::get('business-broadband', function() {
+	return View::make('category', array('name' => 'business broadband'));
 });
 
 Route::get('broadband', function() {
-	return 'this is /broadband';
+	return View::make('category', array('name' => 'broadband'));
 });
 
 Route::get('phone-and-broadband', function() {
-	return 'this is /phone-and-broadband';
+	return View::make('category', array('name' => 'phone & broadband'));
 });
 
 Route::get('TV-and-broadband', function() {
-	return 'this is /TV-and-broadband';
+	return View::make('category', array('name' => 'TV & broadband'));
 });
 
 Route::get('mobile-phone', function() {
-	return 'this is /mobile-phone';
+	return View::make('category', array('name' => 'Mobile phone deals'));
 });
 
 Route::get('article', function() {

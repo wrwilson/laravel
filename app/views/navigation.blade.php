@@ -17,11 +17,11 @@
 <!-- BEGIN NAVIGATION -->
 <div class="collapse navbar-collapse mega-menu">
     <ul class="nav navbar-nav">
-        <li><a href="{{ URL::route('broadband') }}">Broadband</a></li>
-        <li><a href="{{ URL::route('phone-and-broadband') }}">Phone &amp; Broadband</a></li>
-        <li><a href="{{ URL::route('TV-and-broadband') }}">TV &amp; Broadband</a></li>
-        <li><a href="{{ URL::route('business') }}">Business Broadband</a></li>  
-        <li><a href="{{ URL::route('mobile-phone') }}">Mobile Phone</a></li>              
+        {{ HTML::nav_link('broadband', 'Broadband') }}
+        {{ HTML::nav_link('phone-and-broadband', 'Phone &amp; Broadband') }}
+        {{ HTML::nav_link('TV-and-broadband', 'TV &amp; Broadband') }}
+        {{ HTML::nav_link('business-broadband', 'Business Broadband') }}
+        {{ HTML::nav_link('mobile-phone', 'Mobile Phone') }}    
         <!-- END TOP SEARCH -->
     </ul>
 </div>

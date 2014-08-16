@@ -65,32 +65,6 @@ License: You must have a valid license purchased only from themeforest(the above
 
 <!-- Body BEGIN -->
 <body>
-    <!-- BEGIN TOP BAR -->
-    <div class="pre-header">
-        <div class="container">
-            <div class="row">
-                <!-- BEGIN TOP BAR LEFT PART -->
-                <div class="col-md-6 col-sm-6 additional-shop-info">
-                    <ul class="list-unstyled list-inline">
-                        <!-- <li><i class="fa fa-phone"></i><span>+44 800 123 1234</span></li>  -->
-                    </ul>
-                </div>
-                <!-- END TOP BAR LEFT PART -->
-                <!-- BEGIN TOP BAR MENU -->
-                <div class="col-md-6 col-sm-6 additional-nav">
-                    <ul class="list-unstyled list-inline pull-right">
-                        <li><a href="#">Terms &amp; Conditions</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="checkout.html">My Account</a></li>
-                        <li><a href="login-page.html">Log In</a></li>
-                    </ul>
-                </div>
-                <!-- END TOP BAR MENU -->
-            </div>
-        </div>        
-    </div>
-    <!-- END TOP BAR -->
-
     <!-- BEGIN HEADER -->
     <div role="navigation" class="navbar header no-margin">
         <div class="container">
@@ -110,11 +84,11 @@ License: You must have a valid license purchased only from themeforest(the above
           <!-- BEGIN NAVIGATION -->
           <div class="collapse navbar-collapse mega-menu">
               <ul class="nav navbar-nav">
-                  <li><a href="{{ URL::to('broadband') }}">Broadband</a></li>
-                  <li><a href="{{ URL::to('phone-and-broadband') }}">Phone &amp; Broadband</a></li>
-                  <li><a href="{{ URL::to('TV-and-broadband') }}">TV &amp; Broadband</a></li>
-                  <li><a href="{{ URL::to('business') }}">Business Broadband</a></li>  
-                  <li><a href="{{ URL::to('mobile-phone') }}">Mobile Phone</a></li>              
+                  {{ HTML::nav_link('broadband', 'Broadband') }}
+                  {{ HTML::nav_link('phone-and-broadband', 'Phone &amp; Broadband') }}
+                  {{ HTML::nav_link('TV-and-broadband', 'TV &amp; Broadband') }}
+                  {{ HTML::nav_link('business-broadband', 'Business Broadband') }}
+                  {{ HTML::nav_link('mobile-phone', 'Mobile Phone') }}         
                   <!-- END TOP SEARCH -->
               </ul>
           </div>
