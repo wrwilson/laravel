@@ -188,9 +188,9 @@ License: You must have a valid license purchased only from themeforest(the above
           <div class="col-md-6 col-sm-6">
             <div class="pre-footer-subscribe-box pull-right">
               <h2>Newsletter</h2>
-              <form action="#">
+              <form action="{{ URL::to('subscribe') }}">
                 <div class="input-group">
-                  <input type="text" placeholder="youremail@mail.com" class="form-control">
+                  <input type="text" placeholder="youremail@mail.com" class="form-control" name="email">
                   <span class="input-group-btn">
                     <button class="btn btn-primary" type="submit">Subscribe</button>
                   </span>

@@ -54,7 +54,7 @@ return array(
 
 		'mysql' => array(
 			'driver'    => 'mysql',
-			'host'      => '54.164.93.237',
+			'host'      => '127.0.0.1',
 			'database'  => 'laravel',
 			'username'  => 'sweetbb',
 			'password'  => 'WBQdJNXf',

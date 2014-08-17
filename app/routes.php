@@ -40,6 +40,8 @@ Route::get('mobile-phone', function() {
 	return View::make('category', array('name' => 'Mobile phone deals'));
 });
 
+Route::get('subscribe', 'HomeController@subscribe');
+
 Route::get('article', function() {
 	return 'this is /article where the blog should live';
 });

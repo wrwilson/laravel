@@ -20,9 +20,13 @@ class HomeController extends BaseController {
 		return View::make('hello');
 	}
 
-	public function controllerTest()
+	public function subscribe()
 	{
-		return View::make('hello');
+		$subscriber = new Subscriber;
+		$subscriber->Email = Input::get('email');
+		$subscriber->save();
+
+		return View::make('subscribe', array('email' => $subscriber->Email));
 	}
 
 }
