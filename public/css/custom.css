@@ -1,1 +1,7 @@
 /* here you can put your own css to customize and override the theme */
+.result-item {background-color: #fff; padding: 5px 0; margin-bottom: 15px;}
+.result-item div {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}

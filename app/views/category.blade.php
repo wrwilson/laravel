@@ -83,9 +83,68 @@
               </div>
             </div>
             <!-- BEGIN PRODUCT LIST -->
+            <div class="col-md-12 result-item">               
+                <div class="col-md-3">
+                  <img src="{{ URL::asset('temp/products/k1.jpg') }}"> 
+                </div>
+                <div class="col-md-3">
+                <h2>Sky broadband</h2>
+                  <p><span class="pi-price">&pound;24.99 a month</span>
+                  <br> + line rental</p>
+                </div>
+                <div class="col-md-3">
+                  <ul>
+                    <li>&pound;25 M&amp;S Voucher</li>
+                    <li>Unlimited downloads</li>
+                    <li>Up to 24Mbps</li>
+                  </ul>
+                </div>
+                <div class="col-md-2">
+                  <a href="{{ URL::to('broadband/product') }}" class="btn btn-primary">Get this deal</a>
+                </div>
+            </div>
 
-                <!-- CONTENT GOES HERE -->
+            <div class="col-md-12 result-item">               
+                <div class="col-md-3">
+                  <img src="{{ URL::asset('temp/products/k2.jpg') }}"> 
+                </div>
+                <div class="col-md-3">
+                <h2>Virgin broadband</h2>
+                  <p><span class="pi-price">&pound;29.99 a month</span>
+                  <br> + line rental</p>
+                </div>
+                <div class="col-md-3">
+                  <ul>
+                    <li>&pound;25 M&amp;S Voucher</li>
+                    <li>Unlimited downloads</li>
+                    <li>Up to 24Mbps</li>
+                  </ul>
+                </div>
+                <div class="col-md-2">
+                  <a href="{{ URL::to('broadband/product') }}" class="btn btn-primary">Get this deal</a>
+                </div>
+            </div>
 
+            <div class="col-md-12 result-item">               
+                <div class="col-md-3">
+                  <img src="{{ URL::asset('temp/products/k3.jpg') }}"> 
+                </div>
+                <div class="col-md-3">
+                <h2>BT broadband</h2>
+                  <p><span class="pi-price">&pound;31.99 a month</span>
+                  <br> + line rental</p>
+                </div>
+                <div class="col-md-3">
+                  <ul>
+                    <li>&pound;25 M&amp;S Voucher</li>
+                    <li>Unlimited downloads</li>
+                    <li>Up to 24Mbps</li>
+                  </ul>
+                </div>
+                <div class="col-md-2">
+                  <a href="{{ URL::to('broadband/product') }}" class="btn btn-primary">Get this deal</a>
+                </div>
+            </div>
             <!-- END PRODUCT LIST -->
             
           </div>

@@ -47,3 +47,7 @@ Route::get('article', function() {
 });
 
 Route::get('controller-test', 'HomeController@controllerTest');
+
+Route::get('broadband/product', function() {
+	return View::make('product');
+});

@@ -6,7 +6,7 @@
       <div class="container">
         <ul class="breadcrumb">
             <li><a href="{{ URL::to('/') }}">Home</a></li>
-            <li><a href="{{ URL::to('business') }}">business broadband</a></li>
+            <li><a href="{{ URL::to('business-broadband') }}">business broadband</a></li>
             <li class="active">Product 1</li>
         </ul>
         <!-- BEGIN SIDEBAR & CONTENT -->
