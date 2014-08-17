@@ -21,7 +21,7 @@
               <strong><span>£</span>25</strong>
             </div>
 
-            <a href="#" class="ls-s-1 ls-more mini-text" style=" top: 72%; left: 21%; slidedirection : fade; slideoutdirection : fade; durationin : 750; durationout : 750; easingin : easeOutQuint; easingout : easeInOutQuint; delayin : 0; delayout : 0; rotatein : 90; rotateout : -90; scalein : .5; scaleout : .5; display: inline-block; white-space: nowrap;">
+            <a href="{{ URL::to('TV-and-broadband') }}" class="ls-s-1 ls-more mini-text" style=" top: 72%; left: 21%; slidedirection : fade; slideoutdirection : fade; durationin : 750; durationout : 750; easingin : easeOutQuint; easingout : easeInOutQuint; delayin : 0; delayout : 0; rotatein : 90; rotateout : -90; scalein : .5; scaleout : .5; display: inline-block; white-space: nowrap;">
               Compare prices
             </a>
           </div>
@@ -37,15 +37,15 @@
           <!-- BEGIN SIDEBAR -->
           <div class="sidebar col-md-3 col-sm-4">
             <ul class="list-group margin-bottom-25 sidebar-menu">
-              <li class="list-group-item clearfix"><a href="product-list.html"><i class="fa fa-angle-right"></i> Fibre Optic broadband</a></li>
-              <li class="list-group-item clearfix"><a href="product-list.html"><i class="fa fa-angle-right"></i> Cheapest broadband</a></li>
-              <li class="list-group-item clearfix"><a href="product-list.html"><i class="fa fa-angle-right"></i> Fastest broadband</a></li>
-              <li class="list-group-item clearfix"><a href="product-list.html"><i class="fa fa-angle-right"></i> Broadband &amp; phone</a></li>
-              <li class="list-group-item clearfix"><a href="product-list.html"><i class="fa fa-angle-right"></i> Broadband, TV &amp; phone</a></li>
-              <li class="list-group-item clearfix"><a href="product-list.html"><i class="fa fa-angle-right"></i> Business broadband</a></li>
-              <li class="list-group-item clearfix"><a href="product-list.html"><i class="fa fa-angle-right"></i> BT Infinity broadband</a></li>
-              <li class="list-group-item clearfix"><a href="product-list.html"><i class="fa fa-angle-right"></i> Pay monthly mobile phone</a></li>
-              <li class="list-group-item clearfix"><a href="product-list.html"><i class="fa fa-angle-right"></i> SIM-Only deals</a></li>
+              <li class="list-group-item clearfix"><a href="{{ URL::to('broadband') }}"><i class="fa fa-angle-right"></i> Fibre Optic broadband</a></li>
+              <li class="list-group-item clearfix"><a href="{{ URL::to('broadband') }}"><i class="fa fa-angle-right"></i> Cheapest broadband</a></li>
+              <li class="list-group-item clearfix"><a href="{{ URL::to('broadband') }}"><i class="fa fa-angle-right"></i> Fastest broadband</a></li>
+              <li class="list-group-item clearfix"><a href="{{ URL::to('phone-and-broadband') }}"><i class="fa fa-angle-right"></i> Broadband &amp; phone</a></li>
+              <li class="list-group-item clearfix"><a href="{{ URL::to('TV-and-broadband') }}"><i class="fa fa-angle-right"></i> Broadband, TV &amp; phone</a></li>
+              <li class="list-group-item clearfix"><a href="{{ URL::to('business-broadband') }}"><i class="fa fa-angle-right"></i> Business broadband</a></li>
+              <li class="list-group-item clearfix"><a href="{{ URL::to('broadband') }}"><i class="fa fa-angle-right"></i> BT Infinity broadband</a></li>
+              <li class="list-group-item clearfix"><a href="{{ URL::to('mobile-phone') }}"><i class="fa fa-angle-right"></i> Pay monthly mobile phone</a></li>
+              <li class="list-group-item clearfix"><a href="{{ URL::to('mobile-phone') }}"><i class="fa fa-angle-right"></i> SIM-Only deals</a></li>
             </ul>
           </div>
           <!-- END SIDEBAR -->
@@ -61,7 +61,7 @@
                     </div>
                     <h3><a href="item.html">TalkTalk Broadband</a></h3>
                     <div class="pi-price">£3.50</div>
-                    <a href="#" class="btn btn-default add2cart">Get this deal</a>
+                    <a href="{{ URL::to('broadband/product/1234') }}" class="btn btn-default add2cart">Get this deal</a>
                     <div class="sticker sticker-new"></div>
                   </div>
                 </li>
@@ -72,7 +72,7 @@
                     </div>
                     <h3><a href="item.html">Virgin Phone &amp; Broadband</a></h3>
                     <div class="pi-price">£12</div>
-                    <a href="#" class="btn btn-default add2cart">Get this deal</a>
+                    <a href="{{ URL::to('broadband/product/1234') }}" class="btn btn-default add2cart">Get this deal</a>
                   </div>
                 </li>
                 <li>
@@ -82,7 +82,7 @@
                     </div>
                     <h3><a href="item.html">BT Phone, Broadband &amp; TV</a></h3>
                     <div class="pi-price">£24</div>
-                    <a href="#" class="btn btn-default add2cart">Get this deal</a>
+                    <a href="{{ URL::to('broadband/product/1234') }}" class="btn btn-default add2cart">Get this deal</a>
                   </div>
                 </li>
               </ul>
