@@ -24,9 +24,9 @@ class HomeController extends BaseController {
 	{
 		$subscriber = new Subscriber;
 		$subscriber->Email = Input::get('email');
-		$subscriber->save();
+		// $subscriber->save();
 
-		return View::make('subscribe', array('email' => $subscriber->Email));
+		return Redirect::to('subscribe/success')->with('email', $subscriber->Email);
 	}
 
 }

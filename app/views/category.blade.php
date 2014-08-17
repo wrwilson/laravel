@@ -100,7 +100,7 @@
                   </ul>
                 </div>
                 <div class="col-md-2">
-                  <a href="{{ URL::to('broadband/product') }}" class="btn btn-primary">Get this deal</a>
+                  <a href="{{ URL::to('broadband/product/1234') }}" class="btn btn-primary">Get this deal</a>
                 </div>
             </div>
 
@@ -121,7 +121,7 @@
                   </ul>
                 </div>
                 <div class="col-md-2">
-                  <a href="{{ URL::to('broadband/product') }}" class="btn btn-primary">Get this deal</a>
+                  <a href="{{ URL::to('broadband/product/1234') }}" class="btn btn-primary">Get this deal</a>
                 </div>
             </div>
 
@@ -142,7 +142,7 @@
                   </ul>
                 </div>
                 <div class="col-md-2">
-                  <a href="{{ URL::to('broadband/product') }}" class="btn btn-primary">Get this deal</a>
+                  <a href="{{ URL::to('broadband/product/1234') }}" class="btn btn-primary">Get this deal</a>
                 </div>
             </div>
             <!-- END PRODUCT LIST -->

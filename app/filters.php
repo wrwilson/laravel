@@ -88,3 +88,17 @@ Route::filter('csrf', function()
 		throw new Illuminate\Session\TokenMismatchException;
 	}
 });
+
+/*
+|--------------------------------------------------------------------------
+| 404 Page not found
+|--------------------------------------------------------------------------
+|
+| This filter is responsible for catching 404 errors and returning a custom
+| 404 page
+|
+*/
+App::missing(function($exception)
+{
+    return Response::view('errors', array('url' => Request::url()), 404);
+});

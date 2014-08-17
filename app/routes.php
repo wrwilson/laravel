@@ -42,12 +42,14 @@ Route::get('mobile-phone', function() {
 
 Route::get('subscribe', 'HomeController@subscribe');
 
-Route::get('article', function() {
-	return 'this is /article where the blog should live';
+Route::get('subscribe/success', function() {
+	return View::make('subscribe')->with('email', Session::get('email'));
 });
 
-Route::get('controller-test', 'HomeController@controllerTest');
-
-Route::get('broadband/product', function() {
+Route::get('broadband/product/{id}', function($id) {
 	return View::make('product');
+});
+
+Route::get('article', function() {
+	return 'this is /article where the blog should live';
 });
