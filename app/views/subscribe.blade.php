@@ -9,13 +9,6 @@
           <!-- BEGIN CONTENT -->
           <div class="col-md-12 col-sm-12">
             <div class="content-page page-500">
-
-              @if (isset($message) === true)
-                  <div class="number">
-                  Whoops!
-                </div>
-                <h3>{{ $message }}</h3>
-              @else
                <div class="number">
                   Done!
                </div>
@@ -24,7 +17,6 @@
                 <p>Email address: {{ $email }}</p>
                 <p>We'll send you sweet new offers as they become available</p>                
                </div>
-              @endif
             </div>
           </div>
           <!-- END CONTENT -->

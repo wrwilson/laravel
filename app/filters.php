@@ -35,11 +35,16 @@ App::after(function($request, $response)
 
 Route::filter('auth', function()
 {
-	if (Auth::check())
+	if (Auth::guest())
 	{
-	    // The user is logged in...
-	} else {
-	    return Redirect::to('login');
+		if (Request::ajax())
+		{
+			return Response::make('Unauthorized', 401);
+		}
+		else
+		{
+			return Redirect::guest('login');
+		}
 	}
 });
 

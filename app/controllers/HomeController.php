@@ -22,18 +22,11 @@ class HomeController extends BaseController {
 
 	public function subscribe()
 	{
-		$this_email = Input::get('email');
+		$subscriber = new Subscriber;
+		$subscriber->Email = Input::get('email');
+		$subscriber->save();
 
-		if(Subscriber::where('email', '=', $this_email)) {
-			return Redirect::to('subscribe/failure')->with('message', 'You are already registered with that email address');
-		} else {
-			$subscriber = new Subscriber;
-			$subscriber->Email = $this_email;
-			$subscriber->save();
-
-			return Redirect::to('subscribe/success')->with('email', $subscriber->Email);
-		}
-		
+		return Redirect::to('subscribe/success')->with('email', $subscriber->Email);
 	}
 
 }
