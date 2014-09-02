@@ -31,7 +31,8 @@ Route::get('/', function()
 });
 
 Route::get('business-broadband', function() {
-	return View::make('category', array('name' => 'business broadband'));
+	$products = Product::where('category_id', '=', 5)->get();
+	return View::make('category', array('name' => 'business broadband', 'products' => $products));
 });
 
 Route::get('broadband', function() {
@@ -150,6 +151,143 @@ Route::group(array('before' => 'auth', 'prefix' => 'admin'), function() {
 		$category->delete();
 
 		return Redirect::to('admin/categories');
+	});
+
+
+	// SUPPLIER PAGES
+
+	Route::get('suppliers', function() {
+		$suppliers = Supplier::all();
+		return View::make('admin/suppliers', array('suppliers' => $suppliers));
+	});
+
+	Route::get('supplier', function() {
+		return View::make('admin/supplier');
+	});
+
+	Route::get('supplier/{id}', function($id) {
+		$supplier = Supplier::find($id);
+		return View::make('admin/supplier')->with('supplier', $supplier);
+	});
+
+	Route::post('supplier', array('before' => 'csrf', function() {
+		$rules = array('name' => 'required', 'baseurl' => 'required', 'description' => 'required', 'rating' => 'required');
+	    $validation = Validator::make(Input::all(), $rules);
+	    if ($validation->fails()) {
+	    	return Redirect::to('admin/supplier')->withErrors($validation)->withInput();
+	    }
+	    $supplier = new supplier;
+	    $supplier->name = Input::get('name');
+	    $supplier->baseurl = Input::get('baseurl');
+	    $supplier->description = Input::get('description');
+	    $supplier->rating = Input::get('rating');
+	    
+	    if ($supplier->save()) {
+	    	return Redirect::to('admin/suppliers');
+	    }
+	    return Redirect::to('admin/supplier')->withInput(); 
+	}));
+
+	Route::post('supplier/{id}', array('before' => 'csrf', function($id) {
+		$rules = array('name' => 'required', 'baseurl' => 'required', 'description' => 'required', 'rating' => 'required');
+	    $validation = Validator::make(Input::all(), $rules);
+	    if ($validation->fails()) {
+	    	return Redirect::to('admin/supplier/'.$id)->withErrors($validation)->withInput();
+	    }
+
+	    $supplier = Supplier::find($id);
+	    $supplier->name = Input::get('name');
+	    $supplier->baseurl = Input::get('baseurl');
+	    $supplier->description = Input::get('description');
+	    $supplier->rating = Input::get('rating');
+	    
+	    if ($supplier->save()) {
+	    	return Redirect::to('admin/suppliers');
+	    }
+	    return Redirect::to('admin/supplier/{id}')->withInput(); 
+	}));
+
+	Route::get('supplier/delete/{id}', function($id) {
+		$supplier = Supplier::find($id);
+		$supplier->delete();
+
+		return Redirect::to('admin/suppliers');
+	});
+
+	// PRODUCT PAGES
+
+	Route::get('products', function() {
+		$products = Product::all();
+		return View::make('admin/products', array('products' => $products));
+	});
+
+	Route::get('product', function() {
+		$suppliers = Supplier::all();
+		$categories = Category::all();
+		return View::make('admin/product', array('suppliers' => $suppliers, 'categories' => $categories));
+	});
+
+	Route::post('product', array('before' => 'csrf', function() {
+		$rules = array('title' => 'required', 'subtitle' => 'required', 'headline_price' => 'required', 'summary' => 'required', 'supplier_id' => 'required', 'category_id' => 'required', 'url' => 'required', 'description' => 'required');
+	    $validation = Validator::make(Input::all(), $rules);
+	    if ($validation->fails()) {
+	    	return Redirect::to('admin/product')->withErrors($validation)->withInput();
+	    }
+	    $product = new Product;
+	    $product->title = Input::get('title');
+	    $product->subtitle = Input::get('subtitle');
+	    $product->headline_price = Input::get('headline_price');
+	    $product->linerental_price = Input::get('linerental_price');
+	    $product->summary = Input::get('summary');
+	    $product->supplier_id = Input::get('supplier_id');
+	    $product->category_id = Input::get('category_id');
+	    $product->url = Input::get('url');
+	    $product->description = Input::get('description');
+	    $product->promotion_conditions = Input::get('promotion_conditions');
+
+	    if ($product->save()) {
+	    	return Redirect::to('admin/products');
+	    }
+	    return Redirect::to('admin/product')->withInput(); 
+	}));
+
+	Route::get('product/{id}', function($id) {
+		$product = Product::find($id);
+		$suppliers = Supplier::all();
+		$categories = Category::all();
+		return View::make('admin/product', array('product' => $product, 'suppliers' => $suppliers, 'categories' => $categories));
+	});
+
+	Route::post('product/{id}', array('before' => 'csrf', function($id) {
+		$rules = array('title' => 'required', 'subtitle' => 'required', 'headline_price' => 'required', 'summary' => 'required', 'supplier_id' => 'required', 'category_id' => 'required', 'url' => 'required', 'description' => 'required');
+	    $validation = Validator::make(Input::all(), $rules);
+	    if ($validation->fails()) {
+	    	return Redirect::to('admin/product/'.$id)->withErrors($validation)->withInput();
+	    }
+
+	    $product = Product::find($id);
+	    $product->title = Input::get('title');
+	    $product->subtitle = Input::get('subtitle');
+	    $product->headline_price = Input::get('headline_price');
+	    $product->linerental_price = Input::get('linerental_price');
+	    $product->summary = Input::get('summary');
+	    $product->supplier_id = Input::get('supplier_id');
+	    $product->category_id = Input::get('category_id');
+	    $product->url = Input::get('url');
+	    $product->description = Input::get('description');
+	    $product->promotion_conditions = Input::get('promotion_conditions');
+	    
+	    if ($product->save()) {
+	    	return Redirect::to('admin/products');
+	    }
+	    return Redirect::to('admin/product/{id}')->withInput(); 
+	}));
+
+	Route::get('product/delete/{id}', function($id) {
+		$product = Product::find($id);
+		$product->delete();
+
+		return Redirect::to('admin/products');
 	});
 
 	// USER PAGES

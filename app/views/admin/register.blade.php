@@ -27,7 +27,7 @@
 							</span>
 							</label>
 							<div class="col-md-4">
-								<input type="text" name="username" data-required="1" class="form-control" value="<?php if (isset($user)) { echo $user['username']; } ?>" />
+								<input type="text" name="username" data-required="1" class="form-control" value="<?php if (isset($user)) { echo $user['username']; } ?>" <?php if (isset($user)) { echo "readonly"; } ?> />
 							</div>
 						</div>
 						<div class="form-group">

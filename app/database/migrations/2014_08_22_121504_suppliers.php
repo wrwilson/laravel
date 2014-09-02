@@ -15,7 +15,7 @@ class Suppliers extends Migration {
 		Schema::create('suppliers', function($table) {
 			$table->increments('id')->unique();
 			$table->string('name');
-			$table->string('base-url');
+			$table->string('baseurl');
 			$table->string('description');
 			$table->decimal('rating');
 		});

@@ -1,0 +1,13 @@
+*** Ideas
+
+The best broadband type by phone line - e.g. TalkTalk NGN, BT Standard Line, Virgin Media
+  - needs an API for data
+
+
+  *** TODO's
+
+  2014_08_115858_products.php // clarification on terminoligy needed. Ex: Standard BT Line, VDSL, Virgin Line, TalkTalk NGN
+
+  // reviews table for products
+  // table of different traffic shaping methods. Search Wikipedia for info
+  // related products table

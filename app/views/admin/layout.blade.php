@@ -40,6 +40,9 @@ License: You must have a valid license purchased only from themeforest(the above
 <link rel="stylesheet" type="text/css" href="{{ URL::asset('admin_assets/plugins/jquery-tags-input/jquery.tagsinput.css') }}"/>
 <link rel="stylesheet" type="text/css" href="{{ URL::asset('admin_assets/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ URL::asset('admin_assets/plugins/typeahead/typeahead.css') }}">
+<link href="{{ URL::asset('plugins/rateit/src/rateit.css') }}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="{{ URL::asset('admin_assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.css') }}"/>
+<link rel="stylesheet" type="text/css" href="{{ URL::asset('admin_assets/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css') }}">
 <!-- END THEME STYLES -->
 <link rel="shortcut icon" href="{{ URL::asset('admin_assets/favicon.ico') }}"/>
 </head>
@@ -155,7 +158,7 @@ License: You must have a valid license purchased only from themeforest(the above
 					<ul class="sub-menu">
 						{{ HTML::nav_link('admin/suppliers', 'Suppliers') }}
 						{{ HTML::nav_link('admin/products', 'Products') }}
-						{{ HTML::nav_link('admin/categories', 'categories') }}
+						{{ HTML::nav_link('admin/categories', 'Categories') }}
 					</ul>
 				</li>
 				<li>
@@ -224,10 +227,16 @@ License: You must have a valid license purchased only from themeforest(the above
 <script src="{{ URL::asset('admin_assets/plugins/bootstrap-touchspin/bootstrap.touchspin.js') }}" type="text/javascript"></script>
 <script src="{{ URL::asset('admin_assets/plugins/typeahead/handlebars.min.js') }}" type="text/javascript"></script>
 <script src="{{ URL::asset('admin_assets/plugins/typeahead/typeahead.min.js') }}" type="text/javascript"></script>
+<script src="{{ URL::asset('plugins/rateit/src/jquery.rateit.js') }}" type="text/javascript"></script>
+<script type="text/javascript" src="{{ URL::asset('admin_assets/plugins/bootstrap-wysihtml5/wysihtml5-0.3.0.js') }}"></script>
+<script type="text/javascript" src="{{ URL::asset('admin_assets/plugins/bootstrap-wysihtml5/bootstrap-wysihtml5.js') }}"></script>
+<script src="{{ URL::asset('admin_assets/plugins/bootstrap-markdown/lib/markdown.js') }}" type="text/javascript"></script>
+<script src="{{ URL::asset('admin_assets/plugins/bootstrap-markdown/js/bootstrap-markdown.js') }}" type="text/javascript"></script>
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- END CORE PLUGINS -->
 <script src="{{ URL::asset('admin_assets/scripts/core/app.js') }}"></script>
 <script src="{{ URL::asset('admin_assets/scripts/custom/components-form-tools.js') }}"></script>
+<script src="{{ URL::asset('admin_assets/scripts/custom/components-editors.js') }}"></script>
 <script>
 jQuery(document).ready(function() {   
    // initiate layout and plugins
