@@ -86,20 +86,20 @@
             
 
                 <!-- Loop goes here -->  
-                <?php
-                  foreach ($products as $product) {
-                    echo '<div class="col-md-12 result-item"> <div class="col-md-3"><img src="'.URL::asset('temp/products/k1.jpg').'"></div><div class="col-md-3"><h2>';
-                    echo $product->title;
-                    echo '</h2><p><span class="pi-price">&pound;';
-                    echo $product->headline_price;
-                    echo ' a month</span><br> +&pound;';
-                    echo $product->linerental_price;
-                    echo ' line rental</p></div><div class="col-md-3">';
-                    echo $product->summary;
-                    echo '</div><div class="col-md-2"><a href="';
-                    echo Category::find($product->category_id)->category.'/'.$product->id;
-                    echo '" class="btn btn-primary">Get this deal</a></div></div>';
-                  }
+                <?php 
+                //  foreach ($products as $product) {
+                //    echo '<div class="col-md-12 result-item"> <div class="col-md-3"><img src="'.URL::asset('temp/products/k1.jpg').'"></div><div class="col-md-3"><h2>';
+                //    echo $product->title;
+                //    echo '</h2><p><span class="pi-price">&pound;';
+                //    echo $product->headline_price;
+                //    echo ' a month</span><br> +&pound;';
+                //    echo $product->linerental_price;
+                //    echo ' line rental</p></div><div class="col-md-3">';
+                //    echo $product->summary;
+                //    echo '</div><div class="col-md-2"><a href="';
+                //    echo Category::find($product->category_id)->category.'/'.$product->id;
+                //    echo '" class="btn btn-primary">Get this deal</a></div></div>';
+                //  }
                 ?>
               <div class="col-md-12 result-item"> 
                 <div class="col-md-3">
