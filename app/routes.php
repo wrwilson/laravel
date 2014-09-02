@@ -176,7 +176,7 @@ Route::group(array('before' => 'auth', 'prefix' => 'admin'), function() {
 	    if ($validation->fails()) {
 	    	return Redirect::to('admin/supplier')->withErrors($validation)->withInput();
 	    }
-	    $supplier = new supplier;
+	    $supplier = new Supplier;
 	    $supplier->name = Input::get('name');
 	    $supplier->baseurl = Input::get('baseurl');
 	    $supplier->description = Input::get('description');
