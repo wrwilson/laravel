@@ -18,6 +18,7 @@ class Suppliers extends Migration {
 			$table->string('baseurl');
 			$table->string('description');
 			$table->decimal('rating');
+			$table->timestamps();
 		});
 	}
 
