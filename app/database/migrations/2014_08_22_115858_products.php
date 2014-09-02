@@ -26,9 +26,9 @@ class Products extends Migration {
 			$table->string('url');
 			// new fields
 			$table->boolean('is_promo');
-			$table->image('image_small');
-			$table->image('image_medium');
-			$table->image('image_large');
+			$table->string('image_small');
+			$table->string('image_medium');
+			$table->string('image_large');
 			$table->string('data_usage');
 			$table->integer('contract_length');
 			$table->integer('price_table_id');
