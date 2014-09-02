@@ -28,7 +28,7 @@ class Suppliers extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('offers');
+		Schema::drop('suppliers');
 	}
 
 }

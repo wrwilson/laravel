@@ -12,7 +12,7 @@ class Categorys extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('suppliers', function($table) {
+		Schema::create('categorys', function($table) {
 			$table->increments('id')->unique();
 			$table->string('category');
 			$table->string('baseurl');
@@ -27,7 +27,7 @@ class Categorys extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('offers');
+		Schema::drop('categorys');
 	}
 
 }
